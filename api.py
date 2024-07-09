@@ -20,11 +20,7 @@ st.set_page_config(layout="wide")
 # Title with image
 img_path = "https://github.com/hugoapi/api2/blob/main/IAQ4EDU.png"
 st.sidebar.image(img_path, caption="Streamlit Logo")
-    if os.path.exists(img_path):
-        img = Image.open(img_path)
-        st.image(img)
-    else:
-        st.error(f"L'image {img_path} n'a pas été trouvée.")
+
 
 # In[2] webapp
 # Title
