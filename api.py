@@ -76,15 +76,15 @@ elif page == 'Outdoor environmental parameters' :
 
     wind_speed = "wind speed"
     st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{wind_speed}</span>", unsafe_allow_html=True)
-    wind speed = st.number_input("wind speed", label_visibility='collapsed', min_value=0, format='%g')
+    wind_speed = st.number_input("wind speed", label_visibility='collapsed', min_value=0, format='%g')
 
-    wind direction = "wind direction"
+    wind_direction = "wind direction"
     st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{wind_direction}</span>", unsafe_allow_html=True)
     selectboxexample = st.selectbox(label="Season", label_visibility='collapsed', options=("east", "west", "north","south"))
 
-    air temperature = "air temperature"
+    air_temperature = "air temperature"
     st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{air_temperature}</span>", unsafe_allow_html=True)
-    air temperature = st.number_input("air temperature", label_visibility='collapsed', min_value=0, format='%g')
+    air_temperature = st.number_input("air temperature", label_visibility='collapsed', min_value=0, format='%g')
 
 
 
