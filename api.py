@@ -5,6 +5,8 @@ import joblib
 import os
 import pickle
 
+
+st.set_page_config(layout="wide")
 custom_css = """
     <style>
         body {
@@ -16,7 +18,6 @@ custom_css = """
 """
 
 st.markdown(custom_css, unsafe_allow_html=True)
-st.set_page_config(layout="wide")
 # Title with image
 img_path = "https://github.com/hugoapi/api2/raw/main/IAQ4EDU.png"
 st.sidebar.image(img_path, caption="Streamlit Logo")
