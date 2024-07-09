@@ -27,10 +27,7 @@ page = st.sidebar.selectbox('fill in your informations:', ["Occupants's features
 
 if page == "Occupants's features and behaviors" :
     st.title("Occupants's features and behaviors")
-    # Selectbox
-    Season = "Season"
-    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{Season}</span>", unsafe_allow_html=True)
-    selectboxexample = st.selectbox(label="Season", label_visibility='collapsed', options=("Spring", "Summer", "Winter"))
+
 
     # Input bar 1
     Classroom_volunme = "Classroom volunme"
@@ -73,10 +70,30 @@ if page == "Occupants's features and behaviors" :
     st.text_area("Do you have any comments?", label_visibility='collapsed')
 
 elif page == 'Outdoor environmental parameters' :
-     # Text area
-    Comments = "Do you have any comments?"
-    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{Comments}</span>", unsafe_allow_html=True)
-    st.text_area("Do you have any comments?", label_visibility='collapsed')
+    Season = "Season"
+    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{Season}</span>", unsafe_allow_html=True)
+    selectboxexample = st.selectbox(label="Season", label_visibility='collapsed', options=("Spring", "Summer", "Winter"))
+
+    wind_speed = "wind speed"
+    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{wind speed}</span>", unsafe_allow_html=True)
+    wind speed = st.number_input("wind speed", label_visibility='collapsed', min_value=0, format='%g')
+
+    wind direction = "wind direction"
+    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{wind direction}</span>", unsafe_allow_html=True)
+    selectboxexample = st.selectbox(label="Season", label_visibility='collapsed', options=("east", "west", "north","south"))
+
+    air temperature = "air temperature"
+    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{air temperature}</span>", unsafe_allow_html=True)
+    air temperature = st.number_input("air temperature", label_visibility='collapsed', min_value=0, format='%g')
+
+    relative humidity = "air temperature"
+    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{air temperature}</span>", unsafe_allow_html=True)
+    air temperature = st.number_input("air temperature", label_visibility='collapsed', min_value=0, format='%g')
+
+
+
+
+
 
 
 
