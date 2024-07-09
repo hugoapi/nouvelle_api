@@ -75,20 +75,18 @@ elif page == 'Outdoor environmental parameters' :
     selectboxexample = st.selectbox(label="Season", label_visibility='collapsed', options=("Spring", "Summer", "Winter"))
 
     wind_speed = "wind speed"
-    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{wind speed}</span>", unsafe_allow_html=True)
+    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{wind_speed}</span>", unsafe_allow_html=True)
     wind speed = st.number_input("wind speed", label_visibility='collapsed', min_value=0, format='%g')
 
     wind direction = "wind direction"
-    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{wind direction}</span>", unsafe_allow_html=True)
+    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{wind_direction}</span>", unsafe_allow_html=True)
     selectboxexample = st.selectbox(label="Season", label_visibility='collapsed', options=("east", "west", "north","south"))
 
     air temperature = "air temperature"
-    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{air temperature}</span>", unsafe_allow_html=True)
+    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{air_temperature}</span>", unsafe_allow_html=True)
     air temperature = st.number_input("air temperature", label_visibility='collapsed', min_value=0, format='%g')
 
-    relative humidity = "air temperature"
-    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{air temperature}</span>", unsafe_allow_html=True)
-    air temperature = st.number_input("air temperature", label_visibility='collapsed', min_value=0, format='%g')
+
 
 
 
