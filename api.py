@@ -19,6 +19,7 @@ custom_css = """
 
 st.markdown(custom_css, unsafe_allow_html=True)
 # Title with image
+st.sidebar.title("IAQ4EDU project")
 img_path = "https://github.com/hugoapi/api2/raw/main/IAQ4EDU.png"
 st.sidebar.image(img_path)
 
