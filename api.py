@@ -23,6 +23,7 @@ st.sidebar.title("IAQ4EDU project")
 img_path = "https://github.com/hugoapi/api2/raw/main/IAQ4EDU.png"
 st.sidebar.image(img_path)
 
+page = st.sidebar.selectbox('Choose a page:', ['Home', 'Page 1', 'Page 2'])
 
 
 # In[2] webapp
