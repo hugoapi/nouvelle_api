@@ -78,7 +78,7 @@ if page == "Occupants's features and behaviors" :
     st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{ventilation_strategy}</span>", unsafe_allow_html=True)
     ventilation_strategy = st.selectbox("Ventilation strategy", ["Natural", "Mechanical", "Hybrid"], label_visibility='collapsed')
 
-    if st.button("save"):
+    if st.button("save Occupants's data"):
         data1 = {
         "STUDENT_AGE": [student_age],
         "MEAN_CLOTHING_INSULATION_VALUE": [mean_clothing_insulation_value],
@@ -136,7 +136,7 @@ elif page == 'Building and classroom characteristics' :
     # Heating mode
     heating_mode = create_selectbox("Heating mode", ["None", "Central heating", "Radiators", "Underfloor heating", "Heat pump"])
 
-     if st.button("save"):
+     if st.button("save classroom data"):
         data2={
         "CLIMATE_ZONE": [climate_zone],
         "GEOGRAPHIC_LOCATION": [geographic_location],
@@ -193,20 +193,20 @@ elif page == 'Outdoor environmental parameters' :
     st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{running_mean_temperature}</span>", unsafe_allow_html=True)
     running_mean_temperature = st.number_input("running mean temperature", label_visibility='collapsed', min_value=0, format='%g')
 
-    # if st.button("save"):
-    #     data3={
-    #     "SEASON": [season],
-    #     "WIND_SPEED": [wind_speed],
-    #     "WIND_DIRECTION": [wind_direction],
-    #     "AIR_TEMPERATURE": [air_temperature],
-    #     "RELATIVE_HUMIDITY": [relative_humidity],
-    #     "ATMOSPHERIC_PRESSURE": [atmospheric_pressure],
-    #     "PRECIPITATION": [precipitation],
-    #     "SOLAR_RADIATION": [solar_radiation],
-    #     "RUNNING_MEAN_TEMPERATURE": [running_mean_temperature]
-    #     }
+    if st.button("save environmental data"):
+        data3={
+        "SEASON": [season],
+        "WIND_SPEED": [wind_speed],
+        "WIND_DIRECTION": [wind_direction],
+        "AIR_TEMPERATURE": [air_temperature],
+        "RELATIVE_HUMIDITY": [relative_humidity],
+        "ATMOSPHERIC_PRESSURE": [atmospheric_pressure],
+        "PRECIPITATION": [precipitation],
+        "SOLAR_RADIATION": [solar_radiation],
+        "RUNNING_MEAN_TEMPERATURE": [running_mean_temperature]
+        }
     
-    #     X3 = pd.DataFrame(data3)
+        X3 = pd.DataFrame(data3)
 
 
 
