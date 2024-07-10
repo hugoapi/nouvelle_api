@@ -132,7 +132,7 @@ elif page == 'Building and classroom characteristics' :
     # Heating mode
     heating_mode = create_selectbox("Heating mode", ["None", "Central heating", "Radiators", "Underfloor heating", "Heat pump"])
 
-     if st.button("save"):
+    if st.button("save"):
         data2={
             "CLIMATE_ZONE": [climate_zone],
             "GEOGRAPHIC_LOCATION": [geographic_location],
