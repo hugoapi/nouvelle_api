@@ -79,7 +79,7 @@ if page == "Occupants's features and behaviors" :
     ventilation_strategy = st.selectbox("Ventilation strategy", ["Natural", "Mechanical", "Hybrid"], label_visibility='collapsed')
 
     if st.button("save"):
-            data1 = {
+        data1 = {
         "STUDENT_AGE": [student_age],
         "MEAN_CLOTHING_INSULATION_VALUE": [mean_clothing_insulation_value],
         "NUM_MALE_STUDENTS": [num_male_students],
@@ -136,8 +136,8 @@ elif page == 'Building and classroom characteristics' :
     # Heating mode
     heating_mode = create_selectbox("Heating mode", ["None", "Central heating", "Radiators", "Underfloor heating", "Heat pump"])
 
-     if st.button("save")
-            data2={
+     if st.button("save"):
+        data2={
         "CLIMATE_ZONE": [climate_zone],
         "GEOGRAPHIC_LOCATION": [geographic_location],
         "EDUCATIONAL_LEVEL": [educational_level],
@@ -194,7 +194,7 @@ elif page == 'Outdoor environmental parameters' :
     running_mean_temperature = st.number_input("running mean temperature", label_visibility='collapsed', min_value=0, format='%g')
 
     if st.button("save"):
-            data2={
+        data3={
         "SEASON": [season],
         "WIND_SPEED": [wind_speed],
         "WIND_DIRECTION": [wind_direction],
@@ -206,7 +206,7 @@ elif page == 'Outdoor environmental parameters' :
         "RUNNING_MEAN_TEMPERATURE": [running_mean_temperature]
         }
     
-        X = pd.DataFrame(data)
+        X3 = pd.DataFrame(data3)
 
 
 
