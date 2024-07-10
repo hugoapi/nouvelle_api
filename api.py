@@ -211,8 +211,19 @@ elif page == 'Outdoor environmental parameters' :
         X3 = pd.DataFrame(data3)
 
 
+if st.button("know your IAQ level"):
+        # Créer un espace vide pour le contenu de la nouvelle page
+        placeholder = st.empty()
 
+        # Afficher le message dans l'espace vide
+        placeholder.write("your IAQ level is good !")
 
+if st.button("know your TC level"):
+        # Créer un espace vide pour le contenu de la nouvelle page
+        placeholder = st.empty()
+
+        # Afficher le message dans l'espace vide
+        placeholder.write("your TC level is good !")
 
 
 
