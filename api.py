@@ -80,11 +80,32 @@ elif page == 'Outdoor environmental parameters' :
 
     wind_direction = "wind direction"
     st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{wind_direction}</span>", unsafe_allow_html=True)
-    selectboxexample = st.selectbox(label="Season", label_visibility='collapsed', options=("east", "west", "north","south"))
+    selectboxexample = st.selectbox(label="wind direction", label_visibility='collapsed', options=("east", "west", "north","south"))
 
     air_temperature = "air temperature"
     st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{air_temperature}</span>", unsafe_allow_html=True)
     air_temperature = st.number_input("air temperature", label_visibility='collapsed', min_value=0, format='%g')
+
+    relative_humidity = "relative humidity"
+    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{relative_humidity}</span>", unsafe_allow_html=True)
+    relative_humidity = st.number_input("air temperature", label_visibility='collapsed', min_value=0, format='%g')
+
+    atmospherie_pressure = "atmospherie pressure"
+    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{atmospherie_pressure}</span>", unsafe_allow_html=True)
+    atmospherie_pressure = st.number_input("atmospherie pressure", label_visibility='collapsed', min_value=0, format='%g')
+
+    precipitation = "precipitation"
+    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{precipitation}</span>", unsafe_allow_html=True)
+    precipitation = st.number_input("precipitation", label_visibility='collapsed', min_value=0, format='%g')
+
+    solar_radiation = "solar radiation"
+    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{solar_radiation}</span>", unsafe_allow_html=True)
+    solar_radiation = st.number_input("solar radiation", label_visibility='collapsed', min_value=0, format='%g')
+    
+    running_mean_temperature = "running_mean_temperature"
+    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{running_mean_temperature}</span>", unsafe_allow_html=True)
+    running_mean_temperature = st.number_input("running mean temperature", label_visibility='collapsed', min_value=0, format='%g')
+    
 
 
 
