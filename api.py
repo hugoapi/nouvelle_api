@@ -23,12 +23,16 @@ st.sidebar.title("IAQ4EDU project")
 img_path = "https://github.com/hugoapi/api2/raw/main/IAQ4EDU.png"
 st.sidebar.image(img_path)
 
-page = st.sidebar.selectbox('fill in your informations:', ["Occupants's features and behaviors", 'Outdoor environmental parameters'])
+page = st.sidebar.selectbox('fill in your informations:', ["Occupants's features and behaviors", 'Outdoor environmental parameters','Building and classroom characteristics'])
 
 # Function to create an input field with a label
 def create_input_field(label, min_value=0, format='%g'):
     st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{label}</span>", unsafe_allow_html=True)
     return st.number_input(label, label_visibility='collapsed', min_value=min_value, format=format)
+
+def create_selectbox(label, options):
+    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{label}</span>", unsafe_allow_html=True)
+    return st.selectbox(label, options, label_visibility='collapsed')
 
 if page == "Occupants's features and behaviors" :
     st.title("Occupants's features and behaviors")
@@ -75,9 +79,47 @@ if page == "Occupants's features and behaviors" :
     ventilation_strategy = st.selectbox("Ventilation strategy", ["Natural", "Mechanical", "Hybrid"], label_visibility='collapsed')
 
 
+elif page == 'Building and classroom characteristics' :
+
+    # Climate zone
+    climate_zone = create_selectbox("Climate zone", ["Tropical", "Dry", "Temperate", "Continental", "Polar"])
     
+    # Geographic location
+    geographic_location = create_input_field("Geographic location")
+    
+    # Educational level
+    educational_level = create_selectbox("Educational level", ["Primary", "Secondary", "Higher Education"])
+    
+    # Construction year
+    construction_year = create_input_field("Construction year")
+    
+    # Classroom floor
+    classroom_floor = create_input_field("Classroom floor")
+    
+    # Classroom volume
+    classroom_volume = create_input_field("Classroom volume", min_value=0.0)
+    
+    # Total window area
+    total_window_area = create_input_field("Total window area", min_value=0.0)
+    
+    # Total door area
+    total_door_area = create_input_field("Total door area", min_value=0.0)
+    
+    # Facade orientation
+    facade_orientation = create_selectbox("Facade orientation", ["North", "East", "South", "West"])
+    
+    # Facade area
+    facade_area = create_input_field("Facade area", min_value=0.0)
+    
+    # Facade thickness
+    facade_thickness = create_input_field("Facade thickness", min_value=0.0)
+    
+    # Heating mode
+    heating_mode = create_selectbox("Heating mode", ["None", "Central heating", "Radiators", "Underfloor heating", "Heat pump"])
+
 
 elif page == 'Outdoor environmental parameters' :
+    
     Season = "Season"
     st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{Season}</span>", unsafe_allow_html=True)
     selectboxexample = st.selectbox(label="Season", label_visibility='collapsed', options=("Spring", "Summer", "Winter"))
