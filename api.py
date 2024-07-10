@@ -32,7 +32,7 @@ st.sidebar.markdown("<br>", unsafe_allow_html=True)
 # Création de l'espace vide initial dans la sidebar
 message_placeholder = st.sidebar.empty()
 
-ef show_message(message, message_placeholder):
+def show_message(message, message_placeholder):
     # Effacer le contenu précédent dans l'espace vide
     message_placeholder.empty()
     
