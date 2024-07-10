@@ -28,8 +28,7 @@ st.sidebar.markdown("<br>", unsafe_allow_html=True)
 
 page = st.sidebar.selectbox('fill in your informations:', ["Occupants's features and behaviors", 'Outdoor environmental parameters','Building and classroom characteristics'])
 st.sidebar.markdown("<br>", unsafe_allow_html=True)
-st.sidebar.button("know your IAQ level")
-st.sidebar.button("know your TC level")
+
 
 # Function to create an input field with a label
 def create_input_field(label, min_value=0, format='%g'):
