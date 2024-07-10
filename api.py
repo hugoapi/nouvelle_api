@@ -32,7 +32,8 @@ st.sidebar.markdown("<br>", unsafe_allow_html=True)
 def show_message(message):
     st.sidebar.markdown("<br>", unsafe_allow_html=True)
     st.sidebar.markdown("<br>", unsafe_allow_html=True)
-    st.sidebar.markdown(f"<div style='font-size: 18px; font-weight: bold; background-color: #f0f0f0; padding: 10px; border-radius: 5px;'>{message}</div>", unsafe_allow_html=True)
+    style = "font-size: 18px; font-weight: bold; background-color: white; color: black; padding: 10px; border-radius: 5px;"
+    st.sidebar.markdown(f"<div style='{style}'>{message}</div>", unsafe_allow_html=True)
 
 
 # Function to create an input field with a label
