@@ -25,49 +25,57 @@ st.sidebar.image(img_path)
 
 page = st.sidebar.selectbox('fill in your informations:', ["Occupants's features and behaviors", 'Outdoor environmental parameters'])
 
+# Function to create an input field with a label
+def create_input_field(label, min_value=0, format='%g'):
+    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{label}</span>", unsafe_allow_html=True)
+    return st.number_input(label, label_visibility='collapsed', min_value=min_value, format=format)
+
 if page == "Occupants's features and behaviors" :
     st.title("Occupants's features and behaviors")
 
+    # Student's age
+    student_age = create_input_field("Student's age")
+    
+    # Mean clothing insulation value
+    mean_clothing_insulation_value = create_input_field("Mean clothing insulation value", min_value=0.0)
+    
+    # Number of male students
+    num_male_students = create_input_field("Number of male students")
+    
+    # Number of female students
+    num_female_students = create_input_field("Number of female students")
+    
+    # Number of male adults
+    num_male_adults = create_input_field("Number of male adults")
+    
+    # Number of female adults
+    num_female_adults = create_input_field("Number of female adults")
+    
+    # Activity level
+    activity_level = create_input_field("Activity level", min_value=0.0)
+    
+    # Activity duration
+    activity_duration = create_input_field("Activity duration", min_value=0.0)
+    
+    # Opening area of windows
+    opening_area_windows = create_input_field("Opening area of windows", min_value=0.0)
+    
+    # Opening area of doors
+    opening_area_doors = create_input_field("Opening area of doors", min_value=0.0)
+    
+    # Opening duration of windows
+    opening_duration_windows = create_input_field("Opening duration of windows", min_value=0.0)
+    
+    # Opening duration of doors
+    opening_duration_doors = create_input_field("Opening duration of doors", min_value=0.0)
+    
+    # Ventilation strategy
+    ventilation_strategy = "Ventilation strategy"
+    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{ventilation_strategy}</span>", unsafe_allow_html=True)
+    ventilation_strategy = st.selectbox("Ventilation strategy", ["Natural", "Mechanical", "Hybrid"], label_visibility='collapsed')
 
-    # Input bar 1
-    Classroom_volunme = "Classroom volunme"
-    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{Classroom_volunme}</span>", unsafe_allow_html=True)
-    volume = st.number_input(label="Classroom volunme", label_visibility='collapsed', min_value=0.00, format='%.2f')
+
     
-    # Input bar 2
-    N_students = "Number of students"
-    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{N_students}</span>", unsafe_allow_html=True)
-    students = st.number_input(label="Number of students",label_visibility='collapsed', min_value=0, max_value=100, format='%g')
-    
-    # Input bar 3
-    Occupancy_duration = "Occupancy duration"
-    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{Occupancy_duration}</span>", unsafe_allow_html=True)
-    occtime = st.number_input(label="Occupancy duration",label_visibility='collapsed', min_value=0, format='%g')
-    
-    # Input bar 4
-    Area_window = "Opening area of windows"
-    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{Area_window}</span>", unsafe_allow_html=True)
-    openwindow = st.number_input(label="Opening area of windows",label_visibility='collapsed', min_value=0.00, format='%.2f')
-    
-    # Input bar 5
-    Duration_window = "Window opening duration"
-    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{Duration_window}</span>", unsafe_allow_html=True)
-    windowtime = st.number_input(label="Window opening duration",label_visibility='collapsed', min_value=0, format='%g')
-    
-    # Input bar 6
-    Area_door = "Opening area of door"
-    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{Area_door}</span>", unsafe_allow_html=True)
-    opendoor = st.number_input(label="Opening area of door",label_visibility='collapsed', min_value=0.00, format='%.2f')
-    
-    # Input bar 7
-    Duration_door = "Door opening duration"
-    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{Duration_door}</span>", unsafe_allow_html=True)
-    doortime = st.number_input("Door opening duration", label_visibility='collapsed', min_value=0, format='%g')
-    
-    # Text area
-    Comments = "Do you have any comments?"
-    st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{Comments}</span>", unsafe_allow_html=True)
-    st.text_area("Do you have any comments?", label_visibility='collapsed')
 
 elif page == 'Outdoor environmental parameters' :
     Season = "Season"
