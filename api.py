@@ -136,23 +136,23 @@ elif page == 'Building and classroom characteristics' :
     # Heating mode
     heating_mode = create_selectbox("Heating mode", ["None", "Central heating", "Radiators", "Underfloor heating", "Heat pump"])
 
-     if st.button("save"):
-        data2={
-        "CLIMATE_ZONE": [climate_zone],
-        "GEOGRAPHIC_LOCATION": [geographic_location],
-        "EDUCATIONAL_LEVEL": [educational_level],
-        "CONSTRUCTION_YEAR": [construction_year],
-        "CLASSROOM_FLOOR": [classroom_floor],
-        "CLASSROOM_VOLUME": [classroom_volume],
-        "TOTAL_WINDOW_AREA": [total_window_area],
-        "TOTAL_DOOR_AREA": [total_door_area],
-        "FACADE_ORIENTATION": [facade_orientation],
-        "FACADE_AREA": [facade_area],
-        "FACADE_THICKNESS": [facade_thickness],
-        "HEATING_MODE": [heating_mode]
-        }
+     # if st.button("save"):
+     #    data2={
+     #    "CLIMATE_ZONE": [climate_zone],
+     #    "GEOGRAPHIC_LOCATION": [geographic_location],
+     #    "EDUCATIONAL_LEVEL": [educational_level],
+     #    "CONSTRUCTION_YEAR": [construction_year],
+     #    "CLASSROOM_FLOOR": [classroom_floor],
+     #    "CLASSROOM_VOLUME": [classroom_volume],
+     #    "TOTAL_WINDOW_AREA": [total_window_area],
+     #    "TOTAL_DOOR_AREA": [total_door_area],
+     #    "FACADE_ORIENTATION": [facade_orientation],
+     #    "FACADE_AREA": [facade_area],
+     #    "FACADE_THICKNESS": [facade_thickness],
+     #    "HEATING_MODE": [heating_mode]
+     #    }
     
-        X2 = pd.DataFrame(data2)
+     #    X2 = pd.DataFrame(data2)
 
 elif page == 'Outdoor environmental parameters' :
     
@@ -193,20 +193,20 @@ elif page == 'Outdoor environmental parameters' :
     st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{running_mean_temperature}</span>", unsafe_allow_html=True)
     running_mean_temperature = st.number_input("running mean temperature", label_visibility='collapsed', min_value=0, format='%g')
 
-    if st.button("save"):
-        data3={
-        "SEASON": [season],
-        "WIND_SPEED": [wind_speed],
-        "WIND_DIRECTION": [wind_direction],
-        "AIR_TEMPERATURE": [air_temperature],
-        "RELATIVE_HUMIDITY": [relative_humidity],
-        "ATMOSPHERIC_PRESSURE": [atmospheric_pressure],
-        "PRECIPITATION": [precipitation],
-        "SOLAR_RADIATION": [solar_radiation],
-        "RUNNING_MEAN_TEMPERATURE": [running_mean_temperature]
-        }
+    # if st.button("save"):
+    #     data3={
+    #     "SEASON": [season],
+    #     "WIND_SPEED": [wind_speed],
+    #     "WIND_DIRECTION": [wind_direction],
+    #     "AIR_TEMPERATURE": [air_temperature],
+    #     "RELATIVE_HUMIDITY": [relative_humidity],
+    #     "ATMOSPHERIC_PRESSURE": [atmospheric_pressure],
+    #     "PRECIPITATION": [precipitation],
+    #     "SOLAR_RADIATION": [solar_radiation],
+    #     "RUNNING_MEAN_TEMPERATURE": [running_mean_temperature]
+    #     }
     
-        X3 = pd.DataFrame(data3)
+    #     X3 = pd.DataFrame(data3)
 
 
 
