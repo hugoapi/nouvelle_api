@@ -78,24 +78,20 @@ if page == "Occupants's features and behaviors" :
     st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{ventilation_strategy}</span>", unsafe_allow_html=True)
     ventilation_strategy = st.selectbox("Ventilation strategy", ["Natural", "Mechanical", "Hybrid"], label_visibility='collapsed')
 
-    if st.button("save"):
-        data1 = {
-            "STUDENT_AGE": [student_age],
-            "MEAN_CLOTHING_INSULATION_VALUE": [mean_clothing_insulation_value],
-            "NUM_MALE_STUDENTS": [num_male_students],
-            "NUM_FEMALE_STUDENTS": [num_female_students],
-            "NUM_MALE_ADULTS": [num_male_adults],
-            "NUM_FEMALE_ADULTS": [num_female_adults],
-            "ACTIVITY_LEVEL": [activity_level],
-            "ACTIVITY_DURATION": [activity_duration],
-            "OPENING_AREA_WINDOWS": [opening_area_windows],
-            "OPENING_AREA_DOORS": [opening_area_doors],
-            "OPENING_DURATION_WINDOWS": [opening_duration_windows],
-            "OPENING_DURATION_DOORS": [opening_duration_doors],
-            "VENTILATION_STRATEGY": [ventilation_strategy]
+     if st.button("save environmental data"):
+        data3 = {
+            "SEASON": [Season],
+            "WIND_SPEED": [wind_speed],
+            "WIND_DIRECTION": [wind_direction],
+            "AIR_TEMPERATURE": [air_temperature],
+            "RELATIVE_HUMIDITY": [relative_humidity],
+            "ATMOSPHERIC_PRESSURE": [atmospheric_pressure],
+            "PRECIPITATION": [precipitation],
+            "SOLAR_RADIATION": [solar_radiation],
+            "RUNNING_MEAN_TEMPERATURE": [running_mean_temperature]
         }
-
-        X1 = pd.DataFrame(data1)
+    
+        X3 = pd.DataFrame(data3)
 
 elif page == 'Building and classroom characteristics' :
 
