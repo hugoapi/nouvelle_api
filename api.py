@@ -78,7 +78,7 @@ if page == "Occupants's features and behaviors" :
     st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{ventilation_strategy}</span>", unsafe_allow_html=True)
     ventilation_strategy = st.selectbox("Ventilation strategy", ["Natural", "Mechanical", "Hybrid"], label_visibility='collapsed')
 
-     if st.button("save environmental data"):
+    if st.button("save environmental data"):
         data3 = {
             "SEASON": [Season],
             "WIND_SPEED": [wind_speed],
