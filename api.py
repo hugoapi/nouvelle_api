@@ -30,16 +30,13 @@ page = st.sidebar.selectbox('fill in your informations:', ["Occupants's features
 st.sidebar.markdown("<br>", unsafe_allow_html=True)
 
 
-# Créer deux colonnes dans la sidebar
-col1, col2 = st.sidebar.columns([2, 1])
+message_placeholder = st.sidebar.empty()
 
-def show_message(message, message_placeholder):
-    # Effacer le contenu précédent dans l'espace vide
-    message_placeholder.empty()
-    
-    # Afficher le nouveau message dans l'espace vide
+def show_message(message_placeholder, message):
+    message_placeholder.empty()  # Efface le contenu précédent
+    st.sidebar.markdown("<br>", unsafe_allow_html=True)  # Ajoute un espace
     style = "font-size: 18px; font-weight: bold; background-color: white; color: black; padding: 10px; border-radius: 5px;"
-    message_placeholder.markdown(f"<div style='{style}'>{message}</div>", unsafe_allow_html=True)
+    st.sidebar.markdown(f"<div style='{style}'>{message}</div>", unsafe_allow_html=True)
 
 # Function to create an input field with a label
 def create_input_field(label, min_value=0, format='%g'):
@@ -223,11 +220,11 @@ elif page == 'Outdoor environmental parameters' :
 
 # Affichage du message pour "know your IAQ level"
 if st.sidebar.button("know your IAQ level button"):
-    show_message("Your IAQ level is good!", col2)
+    show_message(message_placeholder, "Your IAQ level is good!")
 
 # Affichage du message pour "know your TC level"
 if st.sidebar.button("know your TC level button"):
-    show_message("Your TC level is good!", col2)
+    show_message(message_placeholder, "Your TC level is good!")
 
 
 
