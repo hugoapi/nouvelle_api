@@ -92,8 +92,7 @@ if page == "Occupants's features and behaviors" :
         "OPENING_AREA_DOORS": [opening_area_doors],
         "OPENING_DURATION_WINDOWS": [opening_duration_windows],
         "OPENING_DURATION_DOORS": [opening_duration_doors],
-        "VENTILATION_STRATEGY": [ventilation_strategy]
-        }
+        "VENTILATION_STRATEGY": [ventilation_strategy]}
 
         X1 = pd.DataFrame(data1)
 
@@ -149,8 +148,7 @@ elif page == 'Building and classroom characteristics' :
         "FACADE_ORIENTATION": [facade_orientation],
         "FACADE_AREA": [facade_area],
         "FACADE_THICKNESS": [facade_thickness],
-        "HEATING_MODE": [heating_mode]
-        }
+        "HEATING_MODE": [heating_mode]}
     
         X2 = pd.DataFrame(data2)
 
@@ -203,8 +201,7 @@ elif page == 'Outdoor environmental parameters' :
         "ATMOSPHERIC_PRESSURE": [atmospheric_pressure],
         "PRECIPITATION": [precipitation],
         "SOLAR_RADIATION": [solar_radiation],
-        "RUNNING_MEAN_TEMPERATURE": [running_mean_temperature]
-        }
+        "RUNNING_MEAN_TEMPERATURE": [running_mean_temperature]}
     
         X3 = pd.DataFrame(data3)
 
