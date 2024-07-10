@@ -78,6 +78,12 @@ if page == "Occupants's features and behaviors" :
     st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{ventilation_strategy}</span>", unsafe_allow_html=True)
     ventilation_strategy = st.selectbox("Ventilation strategy", ["Natural", "Mechanical", "Hybrid"], label_visibility='collapsed')
 
+    if st.button("Connaître votre IAQ"):
+        # Préparer les données d'entrée
+        X = pd.DataFrame([[volume, students, occtime, openwindow, windowtime, opendoor, doortime]], 
+                         columns=["VOLUME", "TOTAL_STUDENTS", "OCCUPIED_TIME", "OPENING_SIZE_WINDOW",
+                                  "OPENINNG_WINDOW_TIME", "OPENING_SIZE_DOOR", 
+                                  "OPENING_DOOR_TIME"])
 
 elif page == 'Building and classroom characteristics' :
 
