@@ -88,7 +88,7 @@ elif page == 'Outdoor environmental parameters' :
 
     relative_humidity = "relative humidity"
     st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{relative_humidity}</span>", unsafe_allow_html=True)
-    relative_humidity = st.number_input("air temperature", label_visibility='collapsed', min_value=0, format='%g')
+    relative_humidity = st.number_input("relative humidity", label_visibility='collapsed', min_value=0, format='%g')
 
     atmospherie_pressure = "atmospherie pressure"
     st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{atmospherie_pressure}</span>", unsafe_allow_html=True)
