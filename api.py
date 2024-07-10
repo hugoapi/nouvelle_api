@@ -212,11 +212,19 @@ elif page == 'Outdoor environmental parameters' :
 
 # Affichage du message pour "know your IAQ level"
 if st.sidebar.button("know your IAQ level"):
-    st.sidebar.write("Your IAQ level is good!")
+            # Créer un espace vide pour le contenu de la nouvelle page
+        placeholder = st.empty()
+
+        # Afficher le message dans l'espace vide
+        placeholder.write("your IAQ level is good !")
 
 # Affichage du message pour "know your TC level"
 if st.sidebar.button("know your TC level"):
-    st.sidebar.write("Your TC level is good!")
+        # Créer un espace vide pour le contenu de la nouvelle page
+        placeholder = st.empty()
+
+        # Afficher le message dans l'espace vide
+        placeholder.write("your TC level is good !")
 
 
 
