@@ -136,23 +136,23 @@ elif page == 'Building and classroom characteristics' :
     # Heating mode
     heating_mode = create_selectbox("Heating mode", ["None", "Central heating", "Radiators", "Underfloor heating", "Heat pump"])
 
-     # if st.button("save"):
-     #    data2={
-     #    "CLIMATE_ZONE": [climate_zone],
-     #    "GEOGRAPHIC_LOCATION": [geographic_location],
-     #    "EDUCATIONAL_LEVEL": [educational_level],
-     #    "CONSTRUCTION_YEAR": [construction_year],
-     #    "CLASSROOM_FLOOR": [classroom_floor],
-     #    "CLASSROOM_VOLUME": [classroom_volume],
-     #    "TOTAL_WINDOW_AREA": [total_window_area],
-     #    "TOTAL_DOOR_AREA": [total_door_area],
-     #    "FACADE_ORIENTATION": [facade_orientation],
-     #    "FACADE_AREA": [facade_area],
-     #    "FACADE_THICKNESS": [facade_thickness],
-     #    "HEATING_MODE": [heating_mode]
-     #    }
+     if st.button("save"):
+        data2={
+        "CLIMATE_ZONE": [climate_zone],
+        "GEOGRAPHIC_LOCATION": [geographic_location],
+        "EDUCATIONAL_LEVEL": [educational_level],
+        "CONSTRUCTION_YEAR": [construction_year],
+        "CLASSROOM_FLOOR": [classroom_floor],
+        "CLASSROOM_VOLUME": [classroom_volume],
+        "TOTAL_WINDOW_AREA": [total_window_area],
+        "TOTAL_DOOR_AREA": [total_door_area],
+        "FACADE_ORIENTATION": [facade_orientation],
+        "FACADE_AREA": [facade_area],
+        "FACADE_THICKNESS": [facade_thickness],
+        "HEATING_MODE": [heating_mode]
+        }
     
-     #    X2 = pd.DataFrame(data2)
+        X2 = pd.DataFrame(data2)
 
 elif page == 'Outdoor environmental parameters' :
     
