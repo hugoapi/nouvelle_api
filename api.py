@@ -22,10 +22,12 @@ st.markdown(custom_css, unsafe_allow_html=True)
 st.sidebar.title("IAQ4EDU project")
 img_path = "https://github.com/hugoapi/api2/raw/main/IAQ4EDU.png"
 st.sidebar.image(img_path)
-st.sidebar.button("know your IAQ level")
-st.sidebar.button("know your TC level")
+
 
 page = st.sidebar.selectbox('fill in your informations:', ["Occupants's features and behaviors", 'Outdoor environmental parameters','Building and classroom characteristics'])
+
+st.sidebar.button("know your IAQ level")
+st.sidebar.button("know your TC level")
 
 # Function to create an input field with a label
 def create_input_field(label, min_value=0, format='%g'):
