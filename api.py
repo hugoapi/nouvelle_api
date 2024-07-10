@@ -81,6 +81,7 @@ if page == "Occupants's features and behaviors" :
 
 elif page == 'Building and classroom characteristics' :
 
+    st.title('Building and classroom characteristics')
     # Climate zone
     climate_zone = create_selectbox("Climate zone", ["Tropical", "Dry", "Temperate", "Continental", "Polar"])
     
@@ -120,6 +121,7 @@ elif page == 'Building and classroom characteristics' :
 
 elif page == 'Outdoor environmental parameters' :
     
+    st.title('Outdoor environmental parameters')
     Season = "Season"
     st.markdown(f"<span style='font-size: 18px; font-weight: bold;'>{Season}</span>", unsafe_allow_html=True)
     selectboxexample = st.selectbox(label="Season", label_visibility='collapsed', options=("Spring", "Summer", "Winter"))
